@@ -1,0 +1,59 @@
+package disciplina;
+
+import curso.Curso;
+
+public class DisciplinaMain extends Curso
+{
+
+	public String subjectname;
+	private String subjectcode;
+	public int maxtheorymarks=0;
+	public int maxpracticalmarks=0;
+	private String subjecttype;
+	
+	
+	public void setSubjectType(String subjecttype)
+	{
+		this.subjecttype=subjecttype;
+	}
+	public void setMaxTheoryMarks(int maxtheorymarks)
+	{
+		this.maxtheorymarks=maxtheorymarks;
+	}
+	public void setMaxPracticalMarks(int maxpracticalmarks)
+	{
+		this.maxpracticalmarks=maxpracticalmarks;
+	}
+	public void setSubjectName(String subject)
+	{
+		this.subjectname=subject;
+	}
+	public void setSubjectCode(String subjectcode)
+	{
+		this.subjectcode=subjectcode;
+	}
+	public void setSemouano(int semouano)
+	{
+		super.setSemouano(semouano);
+	}
+	public String getSubjectCode()
+	{
+		return subjectcode;
+	}
+	public String getSubjectName()
+	{
+		return subjectname;
+	}
+	public int getMaxTheoryMarks()
+	{
+		return maxtheorymarks;
+	}
+	public int getMaxPracticalMarks()
+	{
+		return maxpracticalmarks;
+	}
+	public String getSubjectType()
+	{
+		return subjecttype;
+	}
+}

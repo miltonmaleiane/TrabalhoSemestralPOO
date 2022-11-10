@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="College Data Management/Gestao_Academica"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Maleiane-PC/git/TraalhoPOO/College Data Management/jar files/mail.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Maleiane-PC/git/TraalhoPOO/College Data Management/jar files/mysql-connector-java-5.1.38.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Maleiane-PC/git/TraalhoPOO/College Data Management/jar files/rs2xml.jar"/>
+	<classpathentry kind="output" path="College Data Management/bin"/>
+</classpath>

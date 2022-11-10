@@ -5,55 +5,55 @@ import curso.Curso;
 public class Disciplina extends Curso
 {
 
-	public String subjectname;
-	private String subjectcode;
-	public int maxtheorymarks=0;
-	public int maxpracticalmarks=0;
-	private String subjecttype;
+	public String nomeDisciplina;
+	private String codDisciplina;
+	public int maxTeste1=0;
+	public int maxTeste2=0;
+	private String tipoDisc;
 	
 	
-	public void setSubjectType(String subjecttype)
+	public void settipoDisc(String tipoDisc)
 	{
-		this.subjecttype=subjecttype;
+		this.tipoDisc=tipoDisc;
 	}
-	public void setMaxTheoryMarks(int maxtheorymarks)
+	public void setmaxTeste1(int maxTeste1)
 	{
-		this.maxtheorymarks=maxtheorymarks;
+		this.maxTeste1=maxTeste1;
 	}
-	public void setMaxPracticalMarks(int maxpracticalmarks)
+	public void setmaxTeste2(int maxTeste2)
 	{
-		this.maxpracticalmarks=maxpracticalmarks;
+		this.maxTeste2=maxTeste2;
 	}
-	public void setSubjectName(String subject)
+	public void setnomeDisciplina(String subject)
 	{
-		this.subjectname=subject;
+		this.nomeDisciplina=subject;
 	}
-	public void setSubjectCode(String subjectcode)
+	public void setcodDisciplina(String codDisciplina)
 	{
-		this.subjectcode=subjectcode;
+		this.codDisciplina=codDisciplina;
 	}
 	public void setSemouano(int semouano)
 	{
 		super.setSemouano(semouano);
 	}
-	public String getSubjectCode()
+	public String getcodDisciplina()
 	{
-		return subjectcode;
+		return codDisciplina;
 	}
-	public String getSubjectName()
+	public String getnomeDisciplina()
 	{
-		return subjectname;
+		return nomeDisciplina;
 	}
-	public int getMaxTheoryMarks()
+	public int getmaxTeste1()
 	{
-		return maxtheorymarks;
+		return maxTeste1;
 	}
-	public int getMaxPracticalMarks()
+	public int getmaxTeste2()
 	{
-		return maxpracticalmarks;
+		return maxTeste2;
 	}
-	public String getSubjectType()
+	public String gettipoDisc()
 	{
-		return subjecttype;
+		return tipoDisc;
 	}
 }

@@ -29,9 +29,9 @@ import net.proteanit.sql.DbUtils;
 @SuppressWarnings("serial")
 public class PainelAtribuirDisciplina extends JPanel {
 
-	private JPanel tableviewpanel;
+	private JPanel painelViTabela;
 	private JTable table;
-	String condition="";
+	String condicao="";
 	/**
 	 * Create the panel.
 	 */
@@ -55,12 +55,12 @@ public class PainelAtribuirDisciplina extends JPanel {
 					
 				}
 			});
-		 condition="";
+		 condicao="";
 	}
 	public PainelAtribuirDisciplina(DocenteMain fm)
 	{
 		this();
-		condition=" where courcecode='"+fm.f.getCodigoCurso()+"' and semoryear="+fm.f.getSemouano()+" ";
+		condicao=" where courcecode='"+fm.f.getCodigoCurso()+"' and semoryear="+fm.f.getSemouano()+" ";
 		table.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
 		this.createtablemodel();
 		
@@ -68,7 +68,7 @@ public class PainelAtribuirDisciplina extends JPanel {
 	public PainelAtribuirDisciplina(EstudanteMain sm)
 	{
 		this();
-		condition=" where courcecode='"+sm.s.getCodigoCurso()+"' and semoryear="+sm.s.getSemouano()+" ";
+		condicao=" where courcecode='"+sm.s.getCodigoCurso()+"' and semoryear="+sm.s.getSemouano()+" ";
 		table.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
 		this.createtablemodel();
 
@@ -93,11 +93,11 @@ public class PainelAtribuirDisciplina extends JPanel {
 		allfaculitieslabel.setForeground(Color.WHITE);
 		allfaculitieslabel.setFont(new Font("Segoe UI", Font.BOLD, 30));
 		allfaculitieslabel.setOpaque(true);
-		   tableviewpanel = new JPanel();
-			  tableviewpanel.setBackground(Color.WHITE);
-			  tableviewpanel.setBounds(0, 189, 1116, 528);
-			  add(tableviewpanel);
-			  tableviewpanel.setLayout(null);
+		   painelViTabela = new JPanel();
+			  painelViTabela.setBackground(Color.WHITE);
+			  painelViTabela.setBounds(0, 189, 1116, 528);
+			  add(painelViTabela);
+			  painelViTabela.setLayout(null);
 			  
 			  JScrollPane scrollPane = new JScrollPane();
 			  scrollPane.setBounds(10, 11, 1095, 483);
@@ -106,7 +106,7 @@ public class PainelAtribuirDisciplina extends JPanel {
 				{
 					c.setBackground(Color.white);
 				}
-			  tableviewpanel.add(scrollPane);
+			  painelViTabela.add(scrollPane);
 			  
 			  table = new JTable();
 			  createtablemodel();
@@ -136,7 +136,7 @@ public class PainelAtribuirDisciplina extends JPanel {
 	}
 	public void createtablemodel()
 	{
-		ResultSet rs=new DadosDocente().getFacultySubjectInfo(condition);
+		ResultSet rs=new DadosDocente().getFacultySubjectInfo(condicao);
 
 		if(rs!=null)
 		{
